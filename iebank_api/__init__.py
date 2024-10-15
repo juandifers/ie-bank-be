@@ -3,8 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import os
 from flask_migrate import Migrate
+from dotenv import load_dotenv
 
 app = Flask(__name__)
+
+load_dotenv()
 
 print(f"Current ENV: {os.getenv('ENV')}")
 

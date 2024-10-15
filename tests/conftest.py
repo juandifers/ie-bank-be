@@ -1,8 +1,7 @@
+from flask.cli import locate_app
 import pytest
 from iebank_api.models import Account
 from iebank_api import db, app
-
-
 
 @pytest.fixture
 def testing_client(scope='module'):
@@ -17,3 +16,4 @@ def testing_client(scope='module'):
 
     with app.app_context():
         db.drop_all()
+        
