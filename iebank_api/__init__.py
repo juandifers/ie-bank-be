@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import os
-from flask_migrate import Migrate
+#from flask_migrate import Migrate
 from dotenv import load_dotenv
 
 app = Flask(__name__)
@@ -24,7 +24,7 @@ elif os.getenv('ENV') == 'ghci':
 
 db = SQLAlchemy(app)
 
-migrate = Migrate(app, db)
+#migrate = Migrate(app, db)
 
 
 from iebank_api.models import Account
